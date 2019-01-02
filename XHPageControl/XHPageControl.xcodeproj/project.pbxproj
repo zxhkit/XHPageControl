@@ -13,6 +13,7 @@
 		2CF19E7F21DCAE690098D2D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF19E7E21DCAE690098D2D2 /* Assets.xcassets */; };
 		2CF19E8221DCAE690098D2D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF19E8021DCAE690098D2D2 /* LaunchScreen.storyboard */; };
 		2CF19E8521DCAE690098D2D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF19E8421DCAE690098D2D2 /* main.m */; };
+		2CF19E8E21DCAEF30098D2D2 /* XHPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF19E8D21DCAEF30098D2D2 /* XHPageControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		2CF19E8121DCAE690098D2D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CF19E8321DCAE690098D2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CF19E8421DCAE690098D2D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CF19E8C21DCAEF30098D2D2 /* XHPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XHPageControl.h; sourceTree = "<group>"; };
+		2CF19E8D21DCAEF30098D2D2 /* XHPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHPageControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 				2CF19E7621DCAE680098D2D2 /* AppDelegate.m */,
 				2CF19E7821DCAE680098D2D2 /* ViewController.h */,
 				2CF19E7921DCAE680098D2D2 /* ViewController.m */,
+				2CF19E8B21DCAEA50098D2D2 /* PageControl */,
 				2CF19E7B21DCAE680098D2D2 /* Main.storyboard */,
 				2CF19E7E21DCAE690098D2D2 /* Assets.xcassets */,
 				2CF19E8021DCAE690098D2D2 /* LaunchScreen.storyboard */,
@@ -69,6 +73,15 @@
 				2CF19E8421DCAE690098D2D2 /* main.m */,
 			);
 			path = XHPageControl;
+			sourceTree = "<group>";
+		};
+		2CF19E8B21DCAEA50098D2D2 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				2CF19E8C21DCAEF30098D2D2 /* XHPageControl.h */,
+				2CF19E8D21DCAEF30098D2D2 /* XHPageControl.m */,
+			);
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CF19E8E21DCAEF30098D2D2 /* XHPageControl.m in Sources */,
 				2CF19E7A21DCAE680098D2D2 /* ViewController.m in Sources */,
 				2CF19E8521DCAE690098D2D2 /* main.m in Sources */,
 				2CF19E7721DCAE680098D2D2 /* AppDelegate.m in Sources */,
@@ -285,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 953RK3RKLR;
 				INFOPLIST_FILE = XHPageControl/Info.plist;
@@ -292,7 +307,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zxhkit.XHPageControl;
+				PRODUCT_BUNDLE_IDENTIFIER = "zxhkit.XHPageControl-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +317,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 953RK3RKLR;
 				INFOPLIST_FILE = XHPageControl/Info.plist;
@@ -309,7 +325,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zxhkit.XHPageControl;
+				PRODUCT_BUNDLE_IDENTIFIER = "zxhkit.XHPageControl-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
