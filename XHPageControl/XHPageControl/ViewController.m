@@ -104,8 +104,9 @@
     
     _pageControl4 = [[XHPageControl alloc] initWithFrame:CGRectMake(0, 580,[UIScreen mainScreen].bounds.size.width, 30)];
     _pageControl4.numberOfPages = 7;
-    _pageControl4.controlSize = 12;
-    _pageControl4.controlSpacing = 15;
+    _pageControl4.controlSize = 6;
+    _pageControl4.controlSpacing = 7;
+    _pageControl4.type = PageControlRight;
     //   _pageControl4.currentBkImg=[UIImage imageNamed:@"bkimg"];
     _pageControl4.delegate=self;
     _pageControl4.tag = 904;

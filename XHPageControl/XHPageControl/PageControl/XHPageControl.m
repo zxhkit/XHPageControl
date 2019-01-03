@@ -132,7 +132,7 @@
     //居中控件
     CGFloat startX=0;
     CGFloat startY=0;
-    CGFloat mainWidth= (_numberOfPages - 1)* _controlSize*_otherMultiple+ (_numberOfPages + 1) * _controlSpacing + _controlSize * _currentMultiple;
+    CGFloat mainWidth= (_numberOfPages - 1)* _controlSize*_otherMultiple+ (_numberOfPages - 1) * _controlSpacing + _controlSize * _currentMultiple;
     if(self.frame.size.width<mainWidth){
         startX=0;
     }else{
@@ -252,7 +252,7 @@
     
     NSLog(@"-----:%ld",index);
     
-    // [self setCurrentPage:index];
+     [self setCurrentPage:index];
     
 }
 
