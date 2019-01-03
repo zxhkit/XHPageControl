@@ -97,7 +97,8 @@
     _pageControl3.numberOfPages = 7;
     _pageControl3.controlSize = 12;
     _pageControl3.controlSpacing=15;
-    //   _pageControl3.currentBkImg=[UIImage imageNamed:@"bkimg"];
+//    _pageControl3.currentBkImg=[UIImage imageNamed:@"11"];
+//    _pageControl3.otherBkImg=[UIImage imageNamed:@"22"];
     _pageControl3.delegate=self;
     _pageControl3.tag = 903;
     [self.view addSubview:_pageControl3];

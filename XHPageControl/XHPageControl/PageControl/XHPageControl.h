@@ -65,6 +65,10 @@ typedef NS_ENUM(NSUInteger,XHPageControlType){
  */
 @property(nonatomic,strong) UIImage *currentBkImg;
 
+/*
+ 其他点背景图片
+ */
+@property(nonatomic,strong) UIImage *otherBkImg;
 
 @property(nonatomic,weak)  id<XHPageControlDelegate > delegate;
 

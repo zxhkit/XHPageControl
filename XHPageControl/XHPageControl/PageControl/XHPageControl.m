@@ -14,22 +14,21 @@
 @implementation XHPageControl
 
 -(instancetype)initWithFrame:(CGRect)frame{
-    if(self=[super initWithFrame:frame]){
+    if(self = [super initWithFrame:frame]){
         [self initialize];
-        
     }
     return self;
 }
 -(void)initialize{
-    self.backgroundColor=[UIColor clearColor];
+    self.backgroundColor = [UIColor clearColor];
     _otherMultiple = 1;
     _currentMultiple = 2;
-    _numberOfPages=0;
-    _currentPage=0;
-    _controlSize=6;
-    _controlSpacing=8;
-    _otherColor=[UIColor grayColor];
-    _currentColor=[UIColor orangeColor];
+    _numberOfPages = 0;
+    _currentPage = 0;
+    _controlSize = 6;
+    _controlSpacing = 8;
+    _otherColor = [UIColor grayColor];
+    _currentColor = [UIColor orangeColor];
     _type = PageControlMiddle;
 }
 
@@ -37,22 +36,21 @@
 -(void)setOtherColor:(UIColor *)otherColor{
     
     if(![self isTheSameColor:otherColor anotherColor:_otherColor]){
-        
-        _otherColor=otherColor;
+        _otherColor = otherColor;
         [self createPointView];
     }
 }
 
 -(void)setCurrentColor:(UIColor *)currentColor{
     if(![self isTheSameColor:currentColor anotherColor:_currentColor]){
-        _currentColor=currentColor;
+        _currentColor = currentColor;
         [self createPointView];
     }
 }
 
 -(void)setControlSize:(NSInteger)controlSize{
-    if(controlSize!=_controlSize){
-        _controlSize=controlSize;
+    if(_controlSize != controlSize){
+        _controlSize = controlSize;
         [self createPointView];
         
     }
@@ -71,17 +69,24 @@
 }
 
 -(void)setControlSpacing:(NSInteger)controlSpacing{
-    if(_controlSpacing!=controlSpacing){
+    if(_controlSpacing != controlSpacing){
         
-        _controlSpacing=controlSpacing;
+        _controlSpacing = controlSpacing;
         [self createPointView];
         
     }
 }
 
 -(void)setCurrentBkImg:(UIImage *)currentBkImg{
-    if(_currentBkImg!=currentBkImg){
-        _currentBkImg=currentBkImg;
+    if(_currentBkImg != currentBkImg){
+        _currentBkImg = currentBkImg;
+        [self createPointView];
+    }
+}
+
+-(void)setOtherBkImg:(UIImage *)otherBkImg{
+    if (_otherBkImg != otherBkImg) {
+        _otherBkImg = otherBkImg;
         [self createPointView];
     }
 }
@@ -95,9 +100,9 @@
 
 
 -(void)setNumberOfPages:(NSInteger)page{
-    if(_numberOfPages==page)
+    if(_numberOfPages == page)
         return;
-    _numberOfPages=page;
+    _numberOfPages = page;
     [self createPointView];
 }
 
@@ -109,11 +114,11 @@
         [self.delegate xh_PageControlClick:self index:currentPage];
     }
     
-    if(_currentPage==currentPage)
+    if(_currentPage == currentPage)
         return;
     
     [self exchangeCurrentView:_currentPage new:currentPage];
-    _currentPage=currentPage;
+    _currentPage = currentPage;
     
     
 }
@@ -126,62 +131,72 @@
 
 -(void)createPointView{
     [self clearView];
-    if(_numberOfPages<=0)
+    if(_numberOfPages <= 0)
         return;
     
     //居中控件
-    CGFloat startX=0;
-    CGFloat startY=0;
-    CGFloat mainWidth= (_numberOfPages - 1)* _controlSize*_otherMultiple+ (_numberOfPages - 1) * _controlSpacing + _controlSize * _currentMultiple;
+    CGFloat startX = 0;
+    CGFloat startY = 0;
+    CGFloat mainWidth = (_numberOfPages - 1)* _controlSize*_otherMultiple+ (_numberOfPages - 1) * _controlSpacing + _controlSize * _currentMultiple;
     if(self.frame.size.width<mainWidth){
-        startX=0;
+        startX = 0;
     }else{
         if (_type == PageControlLeft) {
-            startX=10;
+            startX = 10;
         }else if (_type == PageControlMiddle){
-            startX=(self.frame.size.width-mainWidth)/2.0;
+            startX = (self.frame.size.width-mainWidth)/2.0;
         }else if (_type == PageControlRight){
-            startX=self.frame.size.width-mainWidth-10;
+            startX = self.frame.size.width-mainWidth-10;
         }
     }
     if(self.frame.size.height<_controlSize){
-        startY=0;
+        startY = 0;
     }else{
-        startY=(self.frame.size.height-_controlSize)/2;
+        startY = (self.frame.size.height-_controlSize)/2;
     }
     //动态创建点
     for (int page=0; page<_numberOfPages; page++) {
-        if(page==_currentPage){
-            UIView *currPointView=[[UIView alloc]initWithFrame:CGRectMake(startX, startY, _controlSize*_currentMultiple, _controlSize)];
-            currPointView.layer.cornerRadius=_controlSize/2;
-            currPointView.tag=page+1000;
-            currPointView.backgroundColor=_currentColor;
-            currPointView.userInteractionEnabled=YES;
-            UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickAction:)];
+        if(page == _currentPage){
+            UIView *currPointView = [[UIView alloc]initWithFrame:CGRectMake(startX, startY, _controlSize*_currentMultiple, _controlSize)];
+            currPointView.layer.cornerRadius = _controlSize/2;
+            currPointView.tag = page+1000;
+            currPointView.backgroundColor = _currentColor;
+            currPointView.userInteractionEnabled = YES;
+            UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickAction:)];
             [currPointView addGestureRecognizer:tapGesture];
             [self addSubview:currPointView];
-            startX=CGRectGetMaxX(currPointView.frame)+_controlSpacing;
+            startX = CGRectGetMaxX(currPointView.frame)+_controlSpacing;
             
             if(_currentBkImg){
-                currPointView.backgroundColor=[UIColor clearColor];
-                UIImageView *currBkImg=[UIImageView new];
-                currBkImg.tag=1234;
-                currBkImg.frame=CGRectMake(0, 0, currPointView.frame.size.width, currPointView.frame.size.height);
-                currBkImg.image=_currentBkImg;
+                currPointView.backgroundColor = [UIColor clearColor];
+                UIImageView *currBkImg = [[UIImageView alloc]init];
+                currBkImg.tag = 2233;
+                currBkImg.frame = CGRectMake(0, 0, currPointView.frame.size.width, currPointView.frame.size.height);
+                currBkImg.image = _currentBkImg;
                 [currPointView addSubview:currBkImg];
             }
             
         }else{
-            UIView *otherPointView=[[UIView alloc]initWithFrame:CGRectMake(startX, startY, _controlSize * _otherMultiple, _controlSize)];
-            otherPointView.backgroundColor=_otherColor;
-            otherPointView.tag=page+1000;
-            otherPointView.layer.cornerRadius=_controlSize/2.0;
-            otherPointView.userInteractionEnabled=YES;
+            UIView *otherPointView = [[UIView alloc]initWithFrame:CGRectMake(startX, startY, _controlSize * _otherMultiple, _controlSize)];
+            otherPointView.backgroundColor = _otherColor;
+            otherPointView.tag = page+1000;
+            otherPointView.layer.cornerRadius = _controlSize/2.0;
+            otherPointView.userInteractionEnabled = YES;
             
-            UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickAction:)];
+            if (_otherBkImg) {
+                otherPointView.backgroundColor = [UIColor clearColor];
+                UIImageView *otherBkImg = [[UIImageView alloc] init];
+                otherBkImg.tag = page+1000+2244;
+                otherBkImg.frame = CGRectMake(0, 0, otherPointView.frame.size.width, otherPointView.frame.size.height);
+                otherBkImg.image = _otherBkImg;
+                [otherPointView addSubview:otherBkImg];
+            }
+            
+            
+            UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickAction:)];
             [otherPointView addGestureRecognizer:tapGesture];
             [self addSubview:otherPointView];
-            startX=CGRectGetMaxX(otherPointView.frame)+_controlSpacing;
+            startX = CGRectGetMaxX(otherPointView.frame)+_controlSpacing;
         }
     }
     
@@ -197,15 +212,26 @@
     CGRect newTemp=newSeltect.frame;
     
     if(_currentBkImg){
-        UIView *imgview=[oldSelect viewWithTag:1234];
+        UIView *imgview=[oldSelect viewWithTag:2233];
         [imgview removeFromSuperview];
         
         newSeltect.backgroundColor=[UIColor clearColor];
         UIImageView *currBkImg=[UIImageView new];
-        currBkImg.tag=1234;
+        currBkImg.tag=2233;
         currBkImg.frame=CGRectMake(0, 0, mpSelect.size.width, mpSelect.size.height);
         currBkImg.image=_currentBkImg;
         [newSeltect addSubview:currBkImg];
+    }
+    if (_otherBkImg) {
+        UIView *imgview=[newSeltect viewWithTag:2244+1000+new];
+        [imgview removeFromSuperview];
+        
+        oldSelect.backgroundColor = [UIColor clearColor];
+        UIImageView *otherBkImg = [UIImageView new];
+        otherBkImg.tag=2244+1000+new;
+        otherBkImg.frame=CGRectMake(0, 0, mpSelect.size.width, mpSelect.size.height);
+        otherBkImg.image=_otherBkImg;
+        [oldSelect addSubview:otherBkImg];
     }
     oldSelect.backgroundColor=_otherColor;
     newSeltect.backgroundColor=_currentColor;
@@ -229,7 +255,7 @@
         {
             for(NSInteger t=old+1;t<new;t++)
             {
-                UIView *ms=[self viewWithTag:1000+t];
+                UIView *ms = [self viewWithTag:1000+t];
                 ms.frame=CGRectMake(ms.frame.origin.x-_controlSize * (_currentMultiple - _otherMultiple), ms.frame.origin.y, _controlSize*_otherMultiple, _controlSize);
             }
         }
