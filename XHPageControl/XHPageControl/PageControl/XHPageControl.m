@@ -13,13 +13,13 @@
 @end
 @implementation XHPageControl
 
--(instancetype)initWithFrame:(CGRect)frame{
+- (instancetype)initWithFrame:(CGRect)frame{
     if(self = [super initWithFrame:frame]){
         [self initialize];
     }
     return self;
 }
--(void)initialize{
+- (void)initialize{
     self.backgroundColor = [UIColor clearColor];
     _otherMultiple = 1;
     _currentMultiple = 2;
@@ -32,104 +32,94 @@
     _type = PageControlMiddle;
 }
 
-
--(void)setOtherColor:(UIColor *)otherColor{
-    
+- (void)setOtherColor:(UIColor *)otherColor{
     if(![self isTheSameColor:otherColor anotherColor:_otherColor]){
         _otherColor = otherColor;
         [self createPointView];
     }
 }
 
--(void)setCurrentColor:(UIColor *)currentColor{
+- (void)setCurrentColor:(UIColor *)currentColor{
     if(![self isTheSameColor:currentColor anotherColor:_currentColor]){
         _currentColor = currentColor;
         [self createPointView];
     }
 }
 
--(void)setControlSize:(NSInteger)controlSize{
+- (void)setControlSize:(NSInteger)controlSize{
     if(_controlSize != controlSize){
         _controlSize = controlSize;
         [self createPointView];
-        
     }
 }
--(void)setOtherMultiple:(NSInteger)otherMultiple{
+- (void)setOtherMultiple:(NSInteger)otherMultiple {
     if (otherMultiple != _otherMultiple) {
         _otherMultiple = otherMultiple;
         [self createPointView];
     }
 }
--(void)setCurrentMultiple:(NSInteger)currentMultiple{
+- (void)setCurrentMultiple:(NSInteger)currentMultiple {
     if (currentMultiple != _currentMultiple) {
         _currentMultiple = currentMultiple;
         [self createPointView];
     }
 }
 
--(void)setControlSpacing:(NSInteger)controlSpacing{
+- (void)setControlSpacing:(NSInteger)controlSpacing {
     if(_controlSpacing != controlSpacing){
-        
         _controlSpacing = controlSpacing;
         [self createPointView];
-        
     }
 }
 
--(void)setCurrentBkImg:(UIImage *)currentBkImg{
+- (void)setCurrentBkImg:(UIImage *)currentBkImg {
     if(_currentBkImg != currentBkImg){
         _currentBkImg = currentBkImg;
         [self createPointView];
     }
 }
 
--(void)setOtherBkImg:(UIImage *)otherBkImg{
+- (void)setOtherBkImg:(UIImage *)otherBkImg {
     if (_otherBkImg != otherBkImg) {
         _otherBkImg = otherBkImg;
         [self createPointView];
     }
 }
 
--(void)setType:(XHPageControlType)type{
+- (void)setType:(XHPageControlType)type {
     if (_type != type) {
         _type = type;
         [self createPointView];
     }
 }
 
-
--(void)setNumberOfPages:(NSInteger)page{
-    if(_numberOfPages == page)
+- (void)setNumberOfPages:(NSInteger)page {
+    if(_numberOfPages == page){
         return;
+    }
     _numberOfPages = page;
     [self createPointView];
 }
 
--(void)setCurrentPage:(NSInteger)currentPage{
+- (void)setCurrentPage:(NSInteger)currentPage {
     
-    
-    if([self.delegate respondsToSelector:@selector(xh_PageControlClick:index:)])
-    {
+    if([self.delegate respondsToSelector:@selector(xh_PageControlClick:index:)]) {
         [self.delegate xh_PageControlClick:self index:currentPage];
     }
     
-    if(_currentPage == currentPage)
+    if(_currentPage == currentPage){
         return;
+    }
     
     [self exchangeCurrentView:_currentPage new:currentPage];
     _currentPage = currentPage;
-    
-    
 }
 
--(void)clearView{
+- (void)clearView {
     [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 }
 
-
-
--(void)createPointView{
+- (void)createPointView {
     [self clearView];
     if(_numberOfPages <= 0)
         return;
@@ -138,24 +128,24 @@
     CGFloat startX = 0;
     CGFloat startY = 0;
     CGFloat mainWidth = (_numberOfPages - 1)* _controlSize*_otherMultiple+ (_numberOfPages - 1) * _controlSpacing + _controlSize * _currentMultiple;
-    if(self.frame.size.width<mainWidth){
+    if(self.frame.size.width < mainWidth){
         startX = 0;
     }else{
         if (_type == PageControlLeft) {
             startX = 10;
         }else if (_type == PageControlMiddle){
-            startX = (self.frame.size.width-mainWidth)/2.0;
+            startX = (self.frame.size.width - mainWidth)/2.0;
         }else if (_type == PageControlRight){
-            startX = self.frame.size.width-mainWidth-10;
+            startX = self.frame.size.width - mainWidth - 10;
         }
     }
-    if(self.frame.size.height<_controlSize){
+    if(self.frame.size.height < _controlSize){
         startY = 0;
     }else{
         startY = (self.frame.size.height-_controlSize)/2;
     }
     //动态创建点
-    for (int page=0; page<_numberOfPages; page++) {
+    for (int page = 0; page < _numberOfPages; page++) {
         if(page == _currentPage){
             UIView *currPointView = [[UIView alloc]initWithFrame:CGRectMake(startX, startY, _controlSize*_currentMultiple, _controlSize)];
             currPointView.layer.cornerRadius = _controlSize/2;
@@ -192,34 +182,31 @@
                 [otherPointView addSubview:otherBkImg];
             }
             
-            
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickAction:)];
             [otherPointView addGestureRecognizer:tapGesture];
             [self addSubview:otherPointView];
             startX = CGRectGetMaxX(otherPointView.frame)+_controlSpacing;
         }
     }
-    
 }
 
 //切换当前的点
--(void)exchangeCurrentView:(NSInteger)old new:(NSInteger)new
-{
-    UIView *oldSelect=[self viewWithTag:1000+old];
-    CGRect mpSelect=oldSelect.frame;
+- (void)exchangeCurrentView:(NSInteger)old new:(NSInteger)new {
+    UIView *oldSelect = [self viewWithTag:1000+old];
+    CGRect mpSelect = oldSelect.frame;
     
-    UIView *newSeltect=[self viewWithTag:1000+new];
-    CGRect newTemp=newSeltect.frame;
+    UIView *newSeltect = [self viewWithTag:1000+new];
+    CGRect newTemp = newSeltect.frame;
     
     if(_currentBkImg){
-        UIView *imgview=[oldSelect viewWithTag:2233];
+        UIView *imgview = [oldSelect viewWithTag:2233];
         [imgview removeFromSuperview];
         
         newSeltect.backgroundColor=[UIColor clearColor];
-        UIImageView *currBkImg=[UIImageView new];
-        currBkImg.tag=2233;
-        currBkImg.frame=CGRectMake(0, 0, mpSelect.size.width, mpSelect.size.height);
-        currBkImg.image=_currentBkImg;
+        UIImageView *currBkImg = [UIImageView new];
+        currBkImg.tag = 2233;
+        currBkImg.frame = CGRectMake(0, 0, mpSelect.size.width, mpSelect.size.height);
+        currBkImg.image = _currentBkImg;
         [newSeltect addSubview:currBkImg];
     }
     if (_otherBkImg) {
@@ -228,63 +215,51 @@
         
         oldSelect.backgroundColor = [UIColor clearColor];
         UIImageView *otherBkImg = [UIImageView new];
-        otherBkImg.tag=2244+1000+new;
-        otherBkImg.frame=CGRectMake(0, 0, mpSelect.size.width, mpSelect.size.height);
-        otherBkImg.image=_otherBkImg;
+        otherBkImg.tag = 2244+1000+new;
+        otherBkImg.frame = CGRectMake(0, 0, mpSelect.size.width, mpSelect.size.height);
+        otherBkImg.image = _otherBkImg;
         [oldSelect addSubview:otherBkImg];
     }
-    oldSelect.backgroundColor=_otherColor;
-    newSeltect.backgroundColor=_currentColor;
+    oldSelect.backgroundColor = _otherColor;
+    newSeltect.backgroundColor = _currentColor;
     
     [UIView animateWithDuration:0.3 animations:^{
-        
-        
-        
         CGFloat lx=mpSelect.origin.x;
-        if(new<old)
+        if (new<old)
             lx+=_controlSize *(_currentMultiple - _otherMultiple);
-        oldSelect.frame=CGRectMake(lx, mpSelect.origin.y, _controlSize * _otherMultiple, _controlSize);
+        oldSelect.frame = CGRectMake(lx, mpSelect.origin.y, _controlSize * _otherMultiple, _controlSize);
         
-        CGFloat mx=newTemp.origin.x;
-        if(new>old)
-            mx-=_controlSize * (_currentMultiple - _otherMultiple);
-        newSeltect.frame=CGRectMake(mx, newTemp.origin.y, _controlSize * _currentMultiple, _controlSize);
+        CGFloat mx = newTemp.origin.x;
+        if (new>old)
+            mx -= _controlSize * (_currentMultiple - _otherMultiple);
+        newSeltect.frame = CGRectMake(mx, newTemp.origin.y, _controlSize * _currentMultiple, _controlSize);
         
         // 左边的时候到右边 越过点击
-        if(new-old>1)
-        {
-            for(NSInteger t=old+1;t<new;t++)
-            {
+        if(new-old>1) {
+            for(NSInteger t = old+1;t < new; t++) {
                 UIView *ms = [self viewWithTag:1000+t];
                 ms.frame=CGRectMake(ms.frame.origin.x-_controlSize * (_currentMultiple - _otherMultiple), ms.frame.origin.y, _controlSize*_otherMultiple, _controlSize);
             }
         }
         // 右边选中到左边的时候 越过点击
-        if(new-old<-1)
-        {
-            for(NSInteger t=new+1;t<old;t++)
-            {
-                UIView *ms=[self viewWithTag:1000+t];
-                ms.frame=CGRectMake(ms.frame.origin.x+_controlSize * (_currentMultiple - _otherMultiple), ms.frame.origin.y, _controlSize*_otherMultiple, _controlSize);
+        if(new-old<-1) {
+            for(NSInteger t = new+1; t < old; t++) {
+                UIView *ms = [self viewWithTag:1000+t];
+                ms.frame = CGRectMake(ms.frame.origin.x+_controlSize * (_currentMultiple - _otherMultiple), ms.frame.origin.y, _controlSize*_otherMultiple, _controlSize);
             }
         }
     }];
 }
 
-
--(void)clickAction:(UITapGestureRecognizer*)recognizer{
+- (void)clickAction:(UITapGestureRecognizer*)recognizer{
     
-    NSInteger index=recognizer.view.tag-1000;
-    
+    NSInteger index = recognizer.view.tag-1000;
     NSLog(@"-----:%ld",index);
-    
-     [self setCurrentPage:index];
-    
+    [self setCurrentPage:index];
 }
 
-
--(BOOL)isTheSameColor:(UIColor*)color1 anotherColor:(UIColor*)color2{
-    return  CGColorEqualToColor(color1.CGColor, color2.CGColor);
+- (BOOL)isTheSameColor:(UIColor*)color1 anotherColor:(UIColor*)color2{
+    return CGColorEqualToColor(color1.CGColor, color2.CGColor);
 }
 
 
