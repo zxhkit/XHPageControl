@@ -226,26 +226,26 @@
     [UIView animateWithDuration:0.3 animations:^{
         CGFloat lx=mpSelect.origin.x;
         if (new<old)
-            lx+=_controlSize *(_currentMultiple - _otherMultiple);
-        oldSelect.frame = CGRectMake(lx, mpSelect.origin.y, _controlSize * _otherMultiple, _controlSize);
+            lx+=self->_controlSize *(self->_currentMultiple - self->_otherMultiple);
+        oldSelect.frame = CGRectMake(lx, mpSelect.origin.y, self->_controlSize * self->_otherMultiple, self->_controlSize);
         
         CGFloat mx = newTemp.origin.x;
         if (new>old)
-            mx -= _controlSize * (_currentMultiple - _otherMultiple);
-        newSeltect.frame = CGRectMake(mx, newTemp.origin.y, _controlSize * _currentMultiple, _controlSize);
+            mx -= self->_controlSize * (self->_currentMultiple - self->_otherMultiple);
+        newSeltect.frame = CGRectMake(mx, newTemp.origin.y, self->_controlSize * self->_currentMultiple, self->_controlSize);
         
         // 左边的时候到右边 越过点击
         if(new-old>1) {
             for(NSInteger t = old+1;t < new; t++) {
                 UIView *ms = [self viewWithTag:1000+t];
-                ms.frame=CGRectMake(ms.frame.origin.x-_controlSize * (_currentMultiple - _otherMultiple), ms.frame.origin.y, _controlSize*_otherMultiple, _controlSize);
+                ms.frame=CGRectMake(ms.frame.origin.x-self->_controlSize * (self->_currentMultiple - self->_otherMultiple), ms.frame.origin.y, self->_controlSize*self->_otherMultiple, self->_controlSize);
             }
         }
         // 右边选中到左边的时候 越过点击
         if(new-old<-1) {
             for(NSInteger t = new+1; t < old; t++) {
                 UIView *ms = [self viewWithTag:1000+t];
-                ms.frame = CGRectMake(ms.frame.origin.x+_controlSize * (_currentMultiple - _otherMultiple), ms.frame.origin.y, _controlSize*_otherMultiple, _controlSize);
+                ms.frame = CGRectMake(ms.frame.origin.x+self->_controlSize * (self->_currentMultiple - self->_otherMultiple), ms.frame.origin.y, self->_controlSize*self->_otherMultiple, self->_controlSize);
             }
         }
     }];
@@ -254,7 +254,7 @@
 - (void)clickAction:(UITapGestureRecognizer*)recognizer{
     
     NSInteger index = recognizer.view.tag-1000;
-    NSLog(@"-----:%ld",index);
+    NSLog(@"-----:%ld",(long)index);
     [self setCurrentPage:index];
 }
 

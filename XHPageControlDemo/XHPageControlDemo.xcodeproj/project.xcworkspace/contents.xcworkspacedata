@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:XHPageControl.xcodeproj">
+      location = "self:XHPageControlDemo.xcodeproj">
    </FileRef>
 </Workspace>

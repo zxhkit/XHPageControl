@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2CF19E7721DCAE680098D2D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF19E7621DCAE680098D2D2 /* AppDelegate.m */; };
-		2CF19E7A21DCAE680098D2D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF19E7921DCAE680098D2D2 /* ViewController.m */; };
-		2CF19E7D21DCAE680098D2D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF19E7B21DCAE680098D2D2 /* Main.storyboard */; };
-		2CF19E7F21DCAE690098D2D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF19E7E21DCAE690098D2D2 /* Assets.xcassets */; };
-		2CF19E8221DCAE690098D2D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF19E8021DCAE690098D2D2 /* LaunchScreen.storyboard */; };
-		2CF19E8521DCAE690098D2D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF19E8421DCAE690098D2D2 /* main.m */; };
-		2CF19E8E21DCAEF30098D2D2 /* XHPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF19E8D21DCAEF30098D2D2 /* XHPageControl.m */; };
+		32038A2E2502A968000E2684 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32038A2D2502A968000E2684 /* AppDelegate.m */; };
+		32038A342502A968000E2684 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32038A332502A968000E2684 /* ViewController.m */; };
+		32038A372502A968000E2684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32038A352502A968000E2684 /* Main.storyboard */; };
+		32038A392502A96A000E2684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32038A382502A96A000E2684 /* Assets.xcassets */; };
+		32038A3C2502A96A000E2684 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32038A3A2502A96A000E2684 /* LaunchScreen.storyboard */; };
+		32038A3F2502A96A000E2684 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32038A3E2502A96A000E2684 /* main.m */; };
+		32038A482502A9C8000E2684 /* XHPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 32038A462502A9C8000E2684 /* XHPageControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2CF19E7221DCAE680098D2D2 /* XHPageControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHPageControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CF19E7521DCAE680098D2D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2CF19E7621DCAE680098D2D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2CF19E7821DCAE680098D2D2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2CF19E7921DCAE680098D2D2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2CF19E7C21DCAE680098D2D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2CF19E7E21DCAE690098D2D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2CF19E8121DCAE690098D2D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2CF19E8321DCAE690098D2D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CF19E8421DCAE690098D2D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2CF19E8C21DCAEF30098D2D2 /* XHPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XHPageControl.h; sourceTree = "<group>"; };
-		2CF19E8D21DCAEF30098D2D2 /* XHPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHPageControl.m; sourceTree = "<group>"; };
+		32038A292502A968000E2684 /* XHPageControlDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHPageControlDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32038A2C2502A968000E2684 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		32038A2D2502A968000E2684 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		32038A322502A968000E2684 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		32038A332502A968000E2684 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		32038A362502A968000E2684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		32038A382502A96A000E2684 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		32038A3B2502A96A000E2684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		32038A3D2502A96A000E2684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32038A3E2502A96A000E2684 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32038A462502A9C8000E2684 /* XHPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPageControl.m; sourceTree = "<group>"; };
+		32038A472502A9C8000E2684 /* XHPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPageControl.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2CF19E6F21DCAE680098D2D2 /* Frameworks */ = {
+		32038A262502A968000E2684 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,44 +42,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2CF19E6921DCAE680098D2D2 = {
+		32038A202502A968000E2684 = {
 			isa = PBXGroup;
 			children = (
-				2CF19E7421DCAE680098D2D2 /* XHPageControl */,
-				2CF19E7321DCAE680098D2D2 /* Products */,
+				32038A2B2502A968000E2684 /* XHPageControlDemo */,
+				32038A2A2502A968000E2684 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2CF19E7321DCAE680098D2D2 /* Products */ = {
+		32038A2A2502A968000E2684 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2CF19E7221DCAE680098D2D2 /* XHPageControl.app */,
+				32038A292502A968000E2684 /* XHPageControlDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2CF19E7421DCAE680098D2D2 /* XHPageControl */ = {
+		32038A2B2502A968000E2684 /* XHPageControlDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2CF19E7521DCAE680098D2D2 /* AppDelegate.h */,
-				2CF19E7621DCAE680098D2D2 /* AppDelegate.m */,
-				2CF19E7821DCAE680098D2D2 /* ViewController.h */,
-				2CF19E7921DCAE680098D2D2 /* ViewController.m */,
-				2CF19E8B21DCAEA50098D2D2 /* PageControl */,
-				2CF19E7B21DCAE680098D2D2 /* Main.storyboard */,
-				2CF19E7E21DCAE690098D2D2 /* Assets.xcassets */,
-				2CF19E8021DCAE690098D2D2 /* LaunchScreen.storyboard */,
-				2CF19E8321DCAE690098D2D2 /* Info.plist */,
-				2CF19E8421DCAE690098D2D2 /* main.m */,
+				32038A2C2502A968000E2684 /* AppDelegate.h */,
+				32038A2D2502A968000E2684 /* AppDelegate.m */,
+				32038A322502A968000E2684 /* ViewController.h */,
+				32038A332502A968000E2684 /* ViewController.m */,
+				32038A452502A9C8000E2684 /* PageControl */,
+				32038A352502A968000E2684 /* Main.storyboard */,
+				32038A382502A96A000E2684 /* Assets.xcassets */,
+				32038A3A2502A96A000E2684 /* LaunchScreen.storyboard */,
+				32038A3D2502A96A000E2684 /* Info.plist */,
+				32038A3E2502A96A000E2684 /* main.m */,
 			);
-			path = XHPageControl;
+			path = XHPageControlDemo;
 			sourceTree = "<group>";
 		};
-		2CF19E8B21DCAEA50098D2D2 /* PageControl */ = {
+		32038A452502A9C8000E2684 /* PageControl */ = {
 			isa = PBXGroup;
 			children = (
-				2CF19E8C21DCAEF30098D2D2 /* XHPageControl.h */,
-				2CF19E8D21DCAEF30098D2D2 /* XHPageControl.m */,
+				32038A472502A9C8000E2684 /* XHPageControl.h */,
+				32038A462502A9C8000E2684 /* XHPageControl.m */,
 			);
 			path = PageControl;
 			sourceTree = "<group>";
@@ -87,38 +87,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2CF19E7121DCAE680098D2D2 /* XHPageControl */ = {
+		32038A282502A968000E2684 /* XHPageControlDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CF19E8821DCAE690098D2D2 /* Build configuration list for PBXNativeTarget "XHPageControl" */;
+			buildConfigurationList = 32038A422502A96A000E2684 /* Build configuration list for PBXNativeTarget "XHPageControlDemo" */;
 			buildPhases = (
-				2CF19E6E21DCAE680098D2D2 /* Sources */,
-				2CF19E6F21DCAE680098D2D2 /* Frameworks */,
-				2CF19E7021DCAE680098D2D2 /* Resources */,
+				32038A252502A968000E2684 /* Sources */,
+				32038A262502A968000E2684 /* Frameworks */,
+				32038A272502A968000E2684 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = XHPageControl;
-			productName = XHPageControl;
-			productReference = 2CF19E7221DCAE680098D2D2 /* XHPageControl.app */;
+			name = XHPageControlDemo;
+			productName = XHPageControlDemo;
+			productReference = 32038A292502A968000E2684 /* XHPageControlDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2CF19E6A21DCAE680098D2D2 /* Project object */ = {
+		32038A212502A968000E2684 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = xuanhe;
 				TargetAttributes = {
-					2CF19E7121DCAE680098D2D2 = {
-						CreatedOnToolsVersion = 10.1;
+					32038A282502A968000E2684 = {
+						CreatedOnToolsVersion = 11.7;
 					};
 				};
 			};
-			buildConfigurationList = 2CF19E6D21DCAE680098D2D2 /* Build configuration list for PBXProject "XHPageControl" */;
+			buildConfigurationList = 32038A242502A968000E2684 /* Build configuration list for PBXProject "XHPageControlDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -126,56 +126,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 2CF19E6921DCAE680098D2D2;
-			productRefGroup = 2CF19E7321DCAE680098D2D2 /* Products */;
+			mainGroup = 32038A202502A968000E2684;
+			productRefGroup = 32038A2A2502A968000E2684 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2CF19E7121DCAE680098D2D2 /* XHPageControl */,
+				32038A282502A968000E2684 /* XHPageControlDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2CF19E7021DCAE680098D2D2 /* Resources */ = {
+		32038A272502A968000E2684 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CF19E8221DCAE690098D2D2 /* LaunchScreen.storyboard in Resources */,
-				2CF19E7F21DCAE690098D2D2 /* Assets.xcassets in Resources */,
-				2CF19E7D21DCAE680098D2D2 /* Main.storyboard in Resources */,
+				32038A3C2502A96A000E2684 /* LaunchScreen.storyboard in Resources */,
+				32038A392502A96A000E2684 /* Assets.xcassets in Resources */,
+				32038A372502A968000E2684 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2CF19E6E21DCAE680098D2D2 /* Sources */ = {
+		32038A252502A968000E2684 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CF19E8E21DCAEF30098D2D2 /* XHPageControl.m in Sources */,
-				2CF19E7A21DCAE680098D2D2 /* ViewController.m in Sources */,
-				2CF19E8521DCAE690098D2D2 /* main.m in Sources */,
-				2CF19E7721DCAE680098D2D2 /* AppDelegate.m in Sources */,
+				32038A482502A9C8000E2684 /* XHPageControl.m in Sources */,
+				32038A342502A968000E2684 /* ViewController.m in Sources */,
+				32038A2E2502A968000E2684 /* AppDelegate.m in Sources */,
+				32038A3F2502A96A000E2684 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2CF19E7B21DCAE680098D2D2 /* Main.storyboard */ = {
+		32038A352502A968000E2684 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2CF19E7C21DCAE680098D2D2 /* Base */,
+				32038A362502A968000E2684 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		2CF19E8021DCAE690098D2D2 /* LaunchScreen.storyboard */ = {
+		32038A3A2502A96A000E2684 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2CF19E8121DCAE690098D2D2 /* Base */,
+				32038A3B2502A96A000E2684 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2CF19E8621DCAE690098D2D2 /* Debug */ = {
+		32038A402502A96A000E2684 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,7 +215,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -234,7 +233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -242,7 +241,7 @@
 			};
 			name = Debug;
 		};
-		2CF19E8721DCAE690098D2D2 /* Release */ = {
+		32038A412502A96A000E2684 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -274,7 +273,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -287,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -295,39 +293,37 @@
 			};
 			name = Release;
 		};
-		2CF19E8921DCAE690098D2D2 /* Debug */ = {
+		32038A432502A96A000E2684 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 953RK3RKLR;
-				INFOPLIST_FILE = XHPageControl/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				DEVELOPMENT_TEAM = 6Y6DL4AM34;
+				INFOPLIST_FILE = XHPageControlDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "zxhkit.XHPageControl-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = bobei.XHPageControlDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		2CF19E8A21DCAE690098D2D2 /* Release */ = {
+		32038A442502A96A000E2684 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 953RK3RKLR;
-				INFOPLIST_FILE = XHPageControl/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				DEVELOPMENT_TEAM = 6Y6DL4AM34;
+				INFOPLIST_FILE = XHPageControlDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "zxhkit.XHPageControl-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = bobei.XHPageControlDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -336,25 +332,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2CF19E6D21DCAE680098D2D2 /* Build configuration list for PBXProject "XHPageControl" */ = {
+		32038A242502A968000E2684 /* Build configuration list for PBXProject "XHPageControlDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2CF19E8621DCAE690098D2D2 /* Debug */,
-				2CF19E8721DCAE690098D2D2 /* Release */,
+				32038A402502A96A000E2684 /* Debug */,
+				32038A412502A96A000E2684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CF19E8821DCAE690098D2D2 /* Build configuration list for PBXNativeTarget "XHPageControl" */ = {
+		32038A422502A96A000E2684 /* Build configuration list for PBXNativeTarget "XHPageControlDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2CF19E8921DCAE690098D2D2 /* Debug */,
-				2CF19E8A21DCAE690098D2D2 /* Release */,
+				32038A432502A96A000E2684 /* Debug */,
+				32038A442502A96A000E2684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2CF19E6A21DCAE680098D2D2 /* Project object */;
+	rootObject = 32038A212502A968000E2684 /* Project object */;
 }

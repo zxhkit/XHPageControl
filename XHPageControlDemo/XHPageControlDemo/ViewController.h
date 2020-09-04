@@ -1,9 +1,9 @@
 //
 //  ViewController.h
-//  XHPageControl
+//  XHPageControlDemo
 //
-//  Created by xuanhe on 2019/1/2.
-//  Copyright © 2019 xuanhe. All rights reserved.
+//  Created by xuanhe on 2020/9/5.
+//  Copyright © 2020 xuanhe. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
