@@ -157,7 +157,7 @@
 
 
 
--(UIImageView *)createImgView:(int)index{
+- (UIImageView *)createImgView:(int)index{
     UIImageView *imgV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"pic-%d",index]]];
     imgV.frame = CGRectMake([UIScreen mainScreen].bounds.size.width * (index-1), 0, [UIScreen mainScreen].bounds.size.width, 100);
     imgV.layer.borderWidth = 1;
