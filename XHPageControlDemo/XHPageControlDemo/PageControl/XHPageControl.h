@@ -21,7 +21,7 @@ typedef NS_ENUM(NSUInteger,XHPageControlType){
 @protocol XHPageControlDelegate <NSObject>
 
 @optional
--(void)xh_PageControlClick:(XHPageControl*)pageControl index:(NSInteger)clickIndex;
+- (void)xh_PageControlClick:(XHPageControl*)pageControl index:(NSInteger)clickIndex;
 
 @end
 @interface XHPageControl : UIControl
