@@ -2,8 +2,9 @@
 //  ViewController.m
 //  XHPageControl
 //
-//  Created by xuanhe on 2019/1/2.
-//  Copyright © 2019 xuanhe. All rights reserved.
+//  Created by xuanhe on 2022/9/2.
+//  github:https://github.com/zxhkit/XHPageControl
+//  简书:https://www.jianshu.com/p/aae83cfaeeb4
 //
 
 #import "ViewController.h"
@@ -81,9 +82,9 @@
     
     _pageControl2 = [[XHPageControl alloc] initWithFrame:CGRectMake(0, 300,[UIScreen mainScreen].bounds.size.width, 30)];
     _pageControl2.numberOfPages = 7;
-    _pageControl2.otherMultiple = 2;
-    _pageControl2.currentMultiple = 4;
-    _pageControl2.type = PageControlLeft;
+    _pageControl2.otherPointSize = CGSizeMake(12, 6);
+    _pageControl2.currentPointSize = CGSizeMake(24, 6);
+    _pageControl2.pageAliment = PageControlLeft;
     _pageControl2.otherColor = [UIColor grayColor];
     _pageControl2.currentColor = [UIColor orangeColor];
     _pageControl2.delegate = self;
@@ -95,7 +96,8 @@
     
     _pageControl3 = [[XHPageControl alloc] initWithFrame:CGRectMake(0, 440,[UIScreen mainScreen].bounds.size.width, 30)];
     _pageControl3.numberOfPages = 7;
-    _pageControl3.controlSize = 12;
+    _pageControl3.otherPointSize = CGSizeMake(12, 12);
+    _pageControl3.currentPointSize = CGSizeMake(24, 12);
     _pageControl3.controlSpacing = 15;
 //    _pageControl3.currentBkImg=[UIImage imageNamed:@"11"];
 //    _pageControl3.otherBkImg=[UIImage imageNamed:@"22"];
@@ -105,9 +107,10 @@
     
     _pageControl4 = [[XHPageControl alloc] initWithFrame:CGRectMake(0, 580,[UIScreen mainScreen].bounds.size.width, 30)];
     _pageControl4.numberOfPages = 7;
-    _pageControl4.controlSize = 6;
-    _pageControl4.controlSpacing = 7;
-    _pageControl4.type = PageControlRight;
+    _pageControl4.otherPointSize = CGSizeMake(6, 6);
+    _pageControl4.currentPointSize = CGSizeMake(6, 16);
+    _pageControl4.controlSpacing = 4;
+    _pageControl4.pageAliment = PageControlRight;
     //   _pageControl4.currentBkImg=[UIImage imageNamed:@"bkimg"];
     _pageControl4.delegate = self;
     _pageControl4.tag = 904;
@@ -115,8 +118,9 @@
     
     
 }
-- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    NSInteger currentPage = targetContentOffset->x / [UIScreen mainScreen].bounds.size.width;
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSInteger currentPage = scrollView.contentOffset.x / [UIScreen mainScreen].bounds.size.width;
 
     if(scrollView.tag == 1001){
         self.pageControl1.currentPage = currentPage;

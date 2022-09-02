@@ -1,9 +1,8 @@
 //
 //  main.m
-//  XHPageControlDemo
+//  XHPageControl
 //
-//  Created by 播呗网络 on 2020/9/5.
-//  Copyright © 2020 xuanhe. All rights reserved.
+//  Created by 天际032 on 2022/9/2.
 //
 
 #import <UIKit/UIKit.h>
