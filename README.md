@@ -6,25 +6,35 @@
 
 ```
 //创建pageControl
-XHPageControl  *_pageControl = [[XHPageControl alloc] initWithFrame:CGRectMake(0, 300,[UIScreen mainScreen].bounds.size.width, 30)];
+XHPageControl  *pageControl = [[XHPageControl alloc] initWithFrame:CGRectMake(0, 300,[UIScreen mainScreen].bounds.size.width, 30)];
 //设置点的总个数
-_pageControl.numberOfPages = 7;
-//设置非选中点的宽度是高度的倍数(设置长条形状)
-_pageControl.otherMultiple = 2;
-//设置选中点的宽度是高度的倍数(设置长条形状)
-_pageControl.currentMultiple = 4;
+pageControl.numberOfPages = 7;
+//设置非选中点的大小（宽度和高度）
+pageControl.otherPointSize = CGSizeMake(12, 6);
+//设置选中点的大小（宽度和高度）
+pageControl.currentPointSize = CGSizeMake(24, 6);
+//设置圆角大小
+pageControl.pointCornerRadius = 3;
+//设置两点之间的间隙
+pageControl.controlSpacing = 3;
+//左右间宽,只有在居左居右显示的时候才有用
+pageControl.leftAndRightSpacing = 10;
 //设置样式.默认居中显示
-_pageControl.type = PageControlLeft;
+pageControl.pageAliment = PageControlMiddle;
 //非选中点的颜色  
-_pageControl.otherColor=[UIColor grayColor];
+pageControl.otherColor=[UIColor grayColor];
 //选中点的颜色  
-_pageControl.currentColor=[UIColor orangeColor];
+pageControl.currentColor=[UIColor orangeColor];
+//当只有一个点的时候是否隐藏,默认隐藏
+pageControl. isHidesForSinglePage = YES;
+//是否可以点击,默认不可以点击
+pageControl .isCanClickPoint = YES;
 //代理    
-_pageControl.delegate = self;
+pageControl.delegate = self;
 //标记    
-_pageControl.tag = 902;
+pageControl.tag = 902;
     
-[self.view addSubview:_pageControl];
+[self.view addSubview:pageControl];
 
 ```
 代理实现:
