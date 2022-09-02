@@ -1,6 +1,10 @@
 # XHPageControl
 一个简洁好用的自定义UIPageControl
 
+Swift版本的请参考https://github.com/zxhkit/JJPageControl
+Swift简书:[Swift自定义PageControl](https://www.jianshu.com/p/057bbce5aa22)
+
+
 实现:
 将自定义PageControl类拖到项目中,并导入头文件.
 
