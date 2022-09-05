@@ -41,6 +41,8 @@
     self.currentColor = [UIColor orangeColor];
     self.isHidesForSinglePage = YES;
     self.isCanClickPoint = NO;
+    self.currentLayerBorderWidth = 1;
+    self.otherLayerBorderWidth = 1;
     self.dots = [NSMutableArray array];
 }
 
@@ -114,6 +116,33 @@
     }
 }
 
+- (void)setCurrentLayerBorderColor:(UIColor *)currentLayerBorderColor{
+    if (![self isTheSameColor:currentLayerBorderColor anotherColor:_currentLayerBorderColor]) {
+        _currentLayerBorderColor = currentLayerBorderColor;
+        [self createPointView];
+    }
+}
+
+- (void)setOtherLayerBorderColor:(UIColor *)otherLayerBorderColor{
+    if (![self isTheSameColor:otherLayerBorderColor anotherColor:_otherLayerBorderColor]) {
+        _otherLayerBorderColor = otherLayerBorderColor;
+        [self createPointView];
+    }
+}
+
+- (void)setCurrentLayerBorderWidth:(CGFloat)currentLayerBorderWidth{
+    if (_currentLayerBorderWidth != currentLayerBorderWidth) {
+        _currentLayerBorderWidth = currentLayerBorderWidth;
+        [self createPointView];
+    }
+}
+
+- (void)setOtherLayerBorderWidth:(CGFloat)otherLayerBorderWidth{
+    if (_otherLayerBorderWidth != otherLayerBorderWidth) {
+        _otherLayerBorderWidth = otherLayerBorderWidth;
+        [self createPointView];
+    }
+}
 
 
 - (void)setCurrentPage:(NSInteger)currentPage {
@@ -176,6 +205,13 @@
             if (self.currentBkImage) {
                 currentPoint.backgroundColor = [UIColor clearColor];
             }
+            if (self.currentLayerBorderColor) {
+                currentPoint.layer.borderColor = self.currentLayerBorderColor.CGColor;
+                currentPoint.layer.borderWidth = self.currentLayerBorderWidth;
+            }else{
+                currentPoint.layer.borderWidth = 0;
+            }
+            
             if (self.isCanClickPoint) {
                 UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickAction:)];
                 [currentPoint addGestureRecognizer:tapGesture];
@@ -194,6 +230,15 @@
             if (self.otherBkImage) {
                 otherPoint.backgroundColor = [UIColor clearColor];
             }
+            
+            if (self.otherLayerBorderColor) {
+                otherPoint.layer.borderColor = self.otherLayerBorderColor.CGColor;
+                otherPoint.layer.borderWidth = self.otherLayerBorderWidth;
+            }else{
+                otherPoint.layer.borderWidth = 0;
+            }
+            
+            
             if (self.isCanClickPoint) {
                 UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickAction:)];
                 [otherPoint addGestureRecognizer:tapGesture];
@@ -248,6 +293,20 @@
     }else{
         theOldDot.backgroundColor = self.otherColor;
     }
+    
+    if (self.currentLayerBorderColor) {
+        theNewDot.layer.borderColor = self.currentLayerBorderColor.CGColor;
+        theNewDot.layer.borderWidth = self.currentLayerBorderWidth;
+    }else{
+        theNewDot.layer.borderWidth = 0;
+    }
+    if (self.otherLayerBorderColor) {
+        theOldDot.layer.borderColor = self.otherLayerBorderColor.CGColor;
+        theOldDot.layer.borderWidth = self.otherLayerBorderWidth;
+    }else{
+        theOldDot.layer.borderWidth = 0;
+    }
+    
     
     __block CGFloat oldMinX = CGRectGetMinX(theOldFrame);
     __block CGFloat newMinX = CGRectGetMinX(theNewFrame);

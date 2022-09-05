@@ -76,6 +76,15 @@
     _pageControl1.frame=CGRectMake(0, 160,[UIScreen mainScreen].bounds.size.width, 30);
     _pageControl1.numberOfPages = 7;
     _pageControl1.delegate = self;
+    _pageControl1.otherPointSize = CGSizeMake(12, 12);
+    _pageControl1.currentPointSize = CGSizeMake(12, 12);
+    _pageControl1.pointCornerRadius = 6;
+    _pageControl1.currentColor = [UIColor clearColor];
+    _pageControl1.otherColor = [UIColor clearColor];
+    _pageControl1.currentLayerBorderWidth = 2;
+    _pageControl1.otherLayerBorderWidth = 2;
+    _pageControl1.currentLayerBorderColor = [UIColor colorWithRed:98/255.0 green:152/255.0 blue:19/255.0 alpha:1];
+    _pageControl1.otherLayerBorderColor = [UIColor colorWithRed:14/255.0 green:65/255.0 blue:189/255.0 alpha:1];
     _pageControl1.tag = 901;
     [self.view addSubview:_pageControl1];
     

@@ -65,6 +65,18 @@ typedef NS_ENUM(NSUInteger,XHPageControlType){
 /// 当前点颜色
 @property (nonatomic, strong)   UIColor          *currentColor;
 
+///其他选中点的layer边框颜色
+@property (nonatomic, strong)   UIColor          *otherLayerBorderColor;
+
+///当前选中点的layer边框颜色
+@property (nonatomic, strong)   UIColor          *currentLayerBorderColor;
+
+///其他点的layer宽
+@property (nonatomic, assign)   CGFloat           otherLayerBorderWidth;
+
+///当前选中点的layer宽
+@property (nonatomic, assign)   CGFloat           currentLayerBorderWidth;
+
 /// 当前点背景图片
 @property (nonatomic, strong)   UIImage          *currentBkImage;
 
