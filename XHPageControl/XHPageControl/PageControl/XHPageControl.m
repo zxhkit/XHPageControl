@@ -118,10 +118,6 @@
 
 - (void)setCurrentPage:(NSInteger)currentPage {
     
-    if ([self.delegate respondsToSelector:@selector(xh_PageControlClick:index:)]) {
-        [self.delegate xh_PageControlClick:self index:currentPage];
-    }
-    
     if (_currentPage == currentPage){
         return;
     }

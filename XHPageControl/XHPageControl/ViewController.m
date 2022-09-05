@@ -85,8 +85,8 @@
     _pageControl2.otherPointSize = CGSizeMake(12, 6);
     _pageControl2.currentPointSize = CGSizeMake(24, 6);
     _pageControl2.pageAliment = PageControlLeft;
-    _pageControl2.otherColor = [UIColor grayColor];
-    _pageControl2.currentColor = [UIColor orangeColor];
+    _pageControl2.otherColor = [UIColor colorWithRed:14/255.0 green:65/255.0 blue:189/255.0 alpha:1];
+    _pageControl2.currentColor = [UIColor colorWithRed:98/255.0 green:152/255.0 blue:19/255.0 alpha:1];
     _pageControl2.delegate = self;
     _pageControl2.tag = 902;
     _pageControl2.layer.borderWidth = 1;
@@ -96,11 +96,11 @@
     
     _pageControl3 = [[XHPageControl alloc] initWithFrame:CGRectMake(0, 440,[UIScreen mainScreen].bounds.size.width, 30)];
     _pageControl3.numberOfPages = 7;
-    _pageControl3.otherPointSize = CGSizeMake(12, 12);
-    _pageControl3.currentPointSize = CGSizeMake(24, 12);
+    _pageControl3.otherPointSize = CGSizeMake(18, 18);
+    _pageControl3.currentPointSize = CGSizeMake(18, 18);
     _pageControl3.controlSpacing = 15;
-//    _pageControl3.currentBkImg=[UIImage imageNamed:@"11"];
-//    _pageControl3.otherBkImg=[UIImage imageNamed:@"22"];
+    _pageControl3.currentBkImage = [UIImage imageNamed:@"image1"];
+    _pageControl3.otherBkImage = [UIImage imageNamed:@"image2"];
     _pageControl3.delegate = self;
     _pageControl3.tag = 903;
     [self.view addSubview:_pageControl3];
