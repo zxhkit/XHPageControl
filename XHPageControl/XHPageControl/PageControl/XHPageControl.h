@@ -33,6 +33,8 @@ typedef NS_ENUM(NSUInteger,XHPageControlType){
 
 /// 代理
 @property (nonatomic, weak)     id<XHPageControlDelegate > delegate;
+/// Block点击回调
+@property (nonatomic, copy)     void (^clickPointBlock)(NSInteger index);
 
 
 /// 控件位置,默认中间:PageControlMiddle

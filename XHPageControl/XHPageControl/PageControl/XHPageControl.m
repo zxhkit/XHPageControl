@@ -260,6 +260,9 @@
         if ([self.delegate respondsToSelector:@selector(xh_PageControlClick:index:)]) {
             [self.delegate xh_PageControlClick:self index:index];
         }
+        if (self.clickPointBlock) {
+            self.clickPointBlock(index);
+        }
     }
 }
 

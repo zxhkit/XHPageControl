@@ -120,9 +120,12 @@
     _pageControl4.currentPointSize = CGSizeMake(6, 16);
     _pageControl4.controlSpacing = 4;
     _pageControl4.pageAliment = PageControlRight;
-    //   _pageControl4.currentBkImg=[UIImage imageNamed:@"bkimg"];
     _pageControl4.delegate = self;
     _pageControl4.tag = 904;
+    _pageControl4.isCanClickPoint = YES;
+    _pageControl4.clickPointBlock = ^(NSInteger index) {
+        NSLog(@"Block:带击了第 %ld 个",index);
+    };
     [self.view addSubview:_pageControl4];
     
     
@@ -148,7 +151,7 @@
 #pragma mark - 代理
 - (void)xh_PageControlClick:(XHPageControl*)pageControl index:(NSInteger)clickIndex{
 
-    NSLog(@"%ld",clickIndex);
+    NSLog(@"代理:带击了第 %ld 个",clickIndex);
     if(pageControl.tag == 901) {
         CGPoint position = CGPointMake([UIScreen mainScreen].bounds.size.width * clickIndex, 0);
         [_scrollView1 setContentOffset:position animated:YES];
