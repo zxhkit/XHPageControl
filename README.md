@@ -1,14 +1,39 @@
 # XHPageControl
-一个简洁好用的自定义UIPageControl
 
-Swift版本的请参考https://github.com/zxhkit/JJPageControl
+[![CI Status](https://img.shields.io/travis/oauth2/XHPageControl.svg?style=flat)](https://travis-ci.org/oauth2/XHPageControl)
+[![Version](https://img.shields.io/cocoapods/v/XHPageControl.svg?style=flat)](https://cocoapods.org/pods/XHPageControl)
+[![License](https://img.shields.io/cocoapods/l/XHPageControl.svg?style=flat)](https://cocoapods.org/pods/XHPageControl)
+[![Platform](https://img.shields.io/cocoapods/p/XHPageControl.svg?style=flat)](https://cocoapods.org/pods/XHPageControl)
 
-Swift简书:[Swift自定义PageControl](https://www.jianshu.com/p/057bbce5aa22)
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 
-实现:
+## Summary
+
+The latest version: 0.1.0
+
+A concise and user-friendly custom UIPageControl
+
+Please refer to the Swift version:[Swift版本JJPageControl](https://github.com/zxhkit/JJPageControl)
+
+## Requirements
+
+  >= iOS 10.0
+
+## Installation
+
+XHPageControl is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'XHPageControl'
+```
+
+##Use
+
 将自定义PageControl类拖到项目中,并导入头文件.
-
 ```
 //创建pageControl
 XHPageControl  *pageControl = [[XHPageControl alloc] initWithFrame:CGRectMake(0, 300,[UIScreen mainScreen].bounds.size.width, 30)];
@@ -57,3 +82,11 @@ pageControl.tag = 902;
 
 
 ```
+
+## Author
+
+zhouxuanhe, 820331062@qq.com
+
+## License
+
+XHPageControl is available under the MIT license. See the LICENSE file for more info.

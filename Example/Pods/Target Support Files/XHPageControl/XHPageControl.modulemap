@@ -1,0 +1,6 @@
+framework module XHPageControl {
+  umbrella header "XHPageControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - XHPageControl (0.1.0)
+
+DEPENDENCIES:
+  - XHPageControl (from `../`)
+
+EXTERNAL SOURCES:
+  XHPageControl:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XHPageControl: b8206ff1b447598cfc51c16b136aa6a89da303d4
+
+PODFILE CHECKSUM: 9b2560d459e150ad2e8868ac06bf73175bd57fad
+
+COCOAPODS: 1.11.3
