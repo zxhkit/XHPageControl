@@ -16,11 +16,12 @@ The latest version: 0.1.0
 
 A concise and user-friendly custom UIPageControl
 
-Please refer to the Swift version:[Swift版本JJPageControl](https://github.com/zxhkit/JJPageControl)
+Please refer to the Swift version:[Swift版本:JJPageControl](https://github.com/zxhkit/JJPageControl)
 
 ## Requirements
-
+```
   >= iOS 10.0
+```
 
 ## Installation
 
@@ -31,7 +32,7 @@ it, simply add the following line to your Podfile:
 pod 'XHPageControl'
 ```
 
-##Use
+## Use
 
 将自定义PageControl类拖到项目中,并导入头文件.
 ```
